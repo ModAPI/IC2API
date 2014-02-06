@@ -291,7 +291,9 @@ public abstract class CropCard
 	 * 
 	 * @param crop reference to ICropTile
 	 */
-	public void onNeighbourChange(ICropTile crop){}
+	public void onNeighbourChange(ICropTile crop){
+		//
+	}
 
 	/**
 	 * Check if the crop should emit redstone.
@@ -305,7 +307,9 @@ public abstract class CropCard
 	 * 
 	 * @param crop reference to ICropTile
 	 */
-	public void onBlockDestroyed(ICropTile crop){}
+	public void onBlockDestroyed(ICropTile crop){
+		//
+	}
 
 	/**
 	 * Get the light value emitted by the plant.
@@ -338,7 +342,9 @@ public abstract class CropCard
 	 * 
 	 * @param crop reference to ICropTile
 	 */
-	public void tick(ICropTile crop) {}
+	public void tick(ICropTile crop) {
+		//
+	}
 
 	/**
 	 * Check whether this plant spreads weed to surrounding tiles.
