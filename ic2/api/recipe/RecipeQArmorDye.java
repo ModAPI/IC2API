@@ -13,6 +13,9 @@ import net.minecraft.world.World;
 
 import ic2.core.item.armor.ItemArmorQuantumSuit;
 
+/**
+ * Currently unused Feature
+ */
 public class RecipeQArmorDye extends RecipesArmorDyes {
 	@Override
 	public boolean matches(InventoryCrafting par1InventoryCrafting, World par2World)
