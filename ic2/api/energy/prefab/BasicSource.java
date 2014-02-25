@@ -180,7 +180,11 @@ public class BasicSource extends TileEntity implements IEnergySource {
 	 */
 	@Override
 	public void writeToNBT(NBTTagCompound tag) {
-		super.writeToNBT(tag);
+		try {
+			super.writeToNBT(tag);
+		} catch (RuntimeException e) {
+			// happens if this is a delegate, ignore
+		}
 
 		NBTTagCompound data = new NBTTagCompound();
 
