@@ -33,6 +33,15 @@ public class ReflectionHelper {
 		return null;
 	}
 
+	public static Object callConstructor(String aClass, int aConstructorIndex, Object aReplacementObject, boolean aLogErrors, Object... aParameters) {
+		try {
+			return Class.forName(aClass).getConstructors()[aConstructorIndex].newInstance(aParameters);
+		} catch (Throwable e) {
+			if (aLogErrors) e.printStackTrace();
+		}
+		return aReplacementObject;
+	}
+
 	public static Object getField(Object aObject, String aField, boolean aPrivate, boolean aLogErrors) {
 		try {
 			Field tField = (aObject instanceof Class)?((Class)aObject).getDeclaredField(aField):aObject.getClass().getDeclaredField(aField);
