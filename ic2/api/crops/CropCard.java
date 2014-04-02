@@ -52,13 +52,10 @@ public abstract class CropCard
 			}
 			return s;
 		}
-		else
-		{
-			if (att.length < 3) return "";
-			String s = att[2];
-			if (att.length >= 4) s+=", "+att[3];
-			return s;
-		}
+		if (att.length < 3) return "";
+		String s = att[2];
+		if (att.length >= 4) s+=", "+att[3];
+		return s;
 	}
 
 	/**
@@ -195,6 +192,8 @@ public abstract class CropCard
 	 * Called when the plant is rightclicked by a player.
 	 * Default action is harvesting.
 	 * 
+	 * Only called Serverside.
+	 * 
 	 * @param crop reference to ICropTile
 	 * @param player player rightclicking the crop
 	 * @return Whether the plant has changed
@@ -246,6 +245,8 @@ public abstract class CropCard
 	/**
 	 * Called when the plant is leftclicked by a player.
 	 * Default action is picking the plant.
+	 * 
+	 * Only called Serverside.
 	 * 
 	 * @param crop reference to ICropTile
 	 * @param player player leftclicked the crop
