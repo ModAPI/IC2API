@@ -14,6 +14,7 @@ public class Recipes {
 	public static IMachineRecipeManager centrifuge;
 	public static IMachineRecipeManager recycler;
 	public static IMachineRecipeManager metalformer;
+	public static IMachineRecipeManager orewasching;
 
 	/**
 	 * Reference amplifier values:
