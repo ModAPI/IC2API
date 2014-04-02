@@ -1,7 +1,5 @@
 package ic2.api.energy.tile;
 
-import java.util.List;
-
 import net.minecraft.tileentity.TileEntity;
 
 /**
@@ -16,11 +14,8 @@ import net.minecraft.tileentity.TileEntity;
  * instead of every single sub-TileEntity. The energy net interaction will be handled by the
  * IMetaDelegate TileEntity as well.
  * 
- * The sub tile array TileEntity[] just provides optional connectivity (IEnergyAcceptor,
- * IEnergyEmitter) and mandatory position (x, y, z, World) data.
- * If the connectivity data on the sub tile is missing, the meta delegate is queried instead.
- * 
- * See ic2/api/energy/usage.txt for an overall description of the energy net api.
+ * The array TileEntity[] just provides connectivity (IEnergyAcceptor, IEnergyEmitter) and
+ * position (x, y, z, World) data.
  */
 public interface IMetaDelegate extends IEnergyTile {
 	/**
@@ -28,5 +23,5 @@ public interface IMetaDelegate extends IEnergyTile {
 	 * 
 	 * @return sub-TileEntity array
 	 */
-	List<TileEntity> getSubTiles();
+	TileEntity[] getSubTiles();
 }
