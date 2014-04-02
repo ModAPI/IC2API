@@ -15,8 +15,8 @@ public interface IMachineRecipeManager {
 	 * Adds a recipe to the machine.
 	 * 
 	 * @param input Recipe input
-	 * @param metadata meta data for additional recipe properties
-	 * @param output Recipe output
+	 * @param metadata meta data for additional recipe properties, may be null
+	 * @param outputs Recipe outputs, zero or more depending on the machine
 	 */
 	public void addRecipe(ItemStack input, NBTTagCompound metadata, ItemStack... outputs);
 
