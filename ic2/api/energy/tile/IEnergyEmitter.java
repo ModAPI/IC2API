@@ -2,7 +2,7 @@ package ic2.api.energy.tile;
 
 import net.minecraft.tileentity.TileEntity;
 
-import ic2.api.Direction;
+import net.minecraftforge.common.ForgeDirection;
 
 /**
  * For internal/multi-block usage only.
@@ -18,6 +18,6 @@ public interface IEnergyEmitter extends IEnergyTile {
 	 * @param direction direction the receiver is from the emitter
 	 * @return Whether energy should be emitted
 	 */
-	boolean emitsEnergyTo(TileEntity receiver, Direction direction);
+	boolean emitsEnergyTo(TileEntity receiver, ForgeDirection direction);
 }
 
