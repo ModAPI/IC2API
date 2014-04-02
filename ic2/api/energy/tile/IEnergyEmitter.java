@@ -14,7 +14,10 @@ public interface IEnergyEmitter extends IEnergyTile {
 	/**
 	 * Determine if this emitter can emit energy to an adjacent receiver.
 	 * 
-	 * @param receiver receiver
+	 * The TileEntity in the receiver parameter is what was originally added to the energy net,
+	 * which may be normal in-world TileEntity, a delegate or an IMetaDelegate.
+	 * 
+	 * @param receiver receiver, may be an IMetaDelegate
 	 * @param direction direction the receiver is from the emitter
 	 * @return Whether energy should be emitted
 	 */
