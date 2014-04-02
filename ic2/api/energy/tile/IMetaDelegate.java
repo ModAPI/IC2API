@@ -14,8 +14,9 @@ import net.minecraft.tileentity.TileEntity;
  * instead of every single sub-TileEntity. The energy net interaction will be handled by the
  * IMetaDelegate TileEntity as well.
  * 
- * The array TileEntity[] just provides connectivity (IEnergyAcceptor, IEnergyEmitter) and
- * position (x, y, z, World) data.
+ * The sub tile array TileEntity[] just provides optional connectivity (IEnergyAcceptor,
+ * IEnergyEmitter) and mandatory position (x, y, z, World) data.
+ * If the connectivity data on the sub tile is missing, the meta delegate is queried instead.
  */
 public interface IMetaDelegate extends IEnergyTile {
 	/**
