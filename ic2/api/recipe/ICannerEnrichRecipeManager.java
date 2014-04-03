@@ -37,7 +37,16 @@ public interface ICannerEnrichRecipeManager {
 
 
 	public static class Input {
-		FluidStack fluid;
-		IRecipeInput additive;
+		public Input(FluidStack fluid, IRecipeInput additive) {
+			this.fluid = fluid;
+			this.additive = additive;
+		}
+
+		public boolean matches(FluidStack fluid, ItemStack additive) {
+			return this.fluid.isFluidEqual(fluid) && this.additive.matches(additive);
+		}
+
+		public final FluidStack fluid;
+		public final IRecipeInput additive;
 	}
 }

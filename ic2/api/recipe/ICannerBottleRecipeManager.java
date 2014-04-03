@@ -20,9 +20,10 @@ public interface ICannerBottleRecipeManager {
 	 * @param container Container to be filled
 	 * @param fill Item to fill into the container
 	 * @param adjustInput modify the input according to the recipe's requirements
+	 * @param acceptTest allow either container or fill to be null to see if either of them is part of a recipe
 	 * @return Recipe output, or null if none
 	 */
-	public RecipeOutput getOutputFor(ItemStack container, ItemStack fill, boolean adjustInput);
+	public RecipeOutput getOutputFor(ItemStack container, ItemStack fill, boolean adjustInput, boolean acceptTest);
 
 	/**
 	 * Gets a list of recipes.
