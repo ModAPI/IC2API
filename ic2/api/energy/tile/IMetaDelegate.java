@@ -1,5 +1,7 @@
 package ic2.api.energy.tile;
 
+import java.util.List;
+
 import net.minecraft.tileentity.TileEntity;
 
 /**
@@ -26,5 +28,5 @@ public interface IMetaDelegate extends IEnergyTile {
 	 * 
 	 * @return sub-TileEntity array
 	 */
-	TileEntity[] getSubTiles();
+	List<TileEntity> getSubTiles();
 }
