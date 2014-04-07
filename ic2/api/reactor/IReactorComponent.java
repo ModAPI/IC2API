@@ -34,9 +34,10 @@ public interface IReactorComponent
 	 * @param youY Y-coordinate of your stack in the grid
 	 * @param pulseX X-coordinate of pulsing stack in the grid
 	 * @param pulseY Y-coordinate of pulsing stack in the grid
+	 * @param heatrun true for only create heat not EU, false for only EU  not heat
 	 * @return true if this component reacts to the pulse (and pulse is therefore meant to produce heat)
 	 */
-	public boolean acceptUraniumPulse(IReactor reactor, ItemStack yourStack, ItemStack pulsingStack, int youX, int youY, int pulseX, int pulseY);
+	public boolean acceptUraniumPulse(IReactor reactor, ItemStack yourStack, ItemStack pulsingStack, int youX, int youY, int pulseX, int pulseY,boolean heatrun);
 
 	/**
 	 * Called by components to determine whether your component can be heated.
