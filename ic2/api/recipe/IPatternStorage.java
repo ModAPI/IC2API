@@ -6,4 +6,6 @@ public interface IPatternStorage {
 
 	boolean transferPattern(ItemStack itemstack, short amountUU , int amountEU);
 
+	int[] getPatternvalus(ItemStack itemstack);
+
 }
