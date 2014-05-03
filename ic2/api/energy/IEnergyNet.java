@@ -5,6 +5,11 @@ import net.minecraft.world.World;
 
 import net.minecraftforge.common.ForgeDirection;
 
+/**
+ * Interface representing the methods provided by the global EnergyNet class.
+ * 
+ * See ic2/api/energy/usage.txt for an overall description of the energy net api.
+ */
 public interface IEnergyNet {
 	/**
 	 * Get the EnergyNet-registered tile entity at the specified position.
