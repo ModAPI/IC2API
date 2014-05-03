@@ -14,6 +14,9 @@ public interface IEnergyAcceptor extends IEnergyTile {
 	/**
 	 * Determine if this acceptor can accept current from an adjacent emitter in a direction.
 	 * 
+	 * The TileEntity in the emitter parameter is what was originally added to the energy net,
+	 * which may be normal in-world TileEntity, a delegate or an IMetaDelegate.
+	 * 
 	 * @param emitter energy emitter
 	 * @param direction direction the energy is being received from
 	 */
