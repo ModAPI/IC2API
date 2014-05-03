@@ -10,21 +10,22 @@ public interface ICannerEnrichRecipeManager {
 	/**
 	 * Adds a recipe to the machine.
 	 * 
-	 * @param fluid Fluid input
+	 * @param input Fluid input
 	 * @param additive Item to enrich the fluid with
 	 * @param output Output fluid
 	 */
-	public void addRecipe(FluidStack fluid, IRecipeInput additive, FluidStack output);
+	public void addRecipe(FluidStack input, IRecipeInput additive, FluidStack output);
 
 	/**
 	 * Gets the recipe output for the given input.
 	 * 
-	 * @param fluid Fluid input
+	 * @param input Fluid input
 	 * @param additive Item to enrich the fluid with
 	 * @param adjustInput modify the input according to the recipe's requirements
-	 * @return Recipe output, or null if none
+	 * @param acceptTest allow input or additive to be null to see if either of them is part of a recipe
+	 * @return Recipe output, or null if none, output fluid in nbt
 	 */
-	public RecipeOutput getOutputFor(FluidStack fluid, ItemStack additive, boolean adjustInput);
+	public RecipeOutput getOutputFor(FluidStack input, ItemStack additive, boolean adjustInput, boolean acceptTest);
 
 	/**
 	 * Gets a list of recipes.
@@ -43,7 +44,8 @@ public interface ICannerEnrichRecipeManager {
 		}
 
 		public boolean matches(FluidStack fluid, ItemStack additive) {
-			return this.fluid.isFluidEqual(fluid) && this.additive.matches(additive);
+			return (this.fluid == null || this.fluid.isFluidEqual(fluid)) &&
+					this.additive.matches(additive);
 		}
 
 		public final FluidStack fluid;
