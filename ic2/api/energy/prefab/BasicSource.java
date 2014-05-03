@@ -226,7 +226,7 @@ public class BasicSource extends TileEntity implements IEnergySource {
 	/**
 	 * Charge the supplied ItemStack from this source's energy buffer.
 	 * 
-	 * @param stack ItemStack to charge
+	 * @param stack ItemStack to charge (null is ignored)
 	 * @return true if energy was transferred
 	 */
 	public boolean charge(ItemStack stack) {
