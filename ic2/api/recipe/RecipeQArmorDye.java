@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 import net.minecraft.block.BlockColored;
 import net.minecraft.entity.passive.EntitySheep;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.RecipesArmorDyes;
@@ -40,7 +40,7 @@ public class RecipeQArmorDye extends RecipesArmorDyes {
 				}
 				else
 				{
-					if (itemstack1.itemID != Item.dyePowder.itemID)
+					if (itemstack1.getItem() != Items.dye)
 					{
 						return false;
 					}
@@ -99,12 +99,12 @@ public class RecipeQArmorDye extends RecipesArmorDyes {
 				}
 				else
 				{
-					if (itemstack1.itemID != Item.dyePowder.itemID)
+					if (itemstack1.getItem() != Items.dye)
 					{
 						return null;
 					}
 
-					float[] afloat = EntitySheep.fleeceColorTable[BlockColored.getBlockFromDye(itemstack1.getItemDamage())];
+					float[] afloat = EntitySheep.fleeceColorTable[BlockColored.func_150031_c(itemstack1.getItemDamage())];
 					int j1 = (int)(afloat[0] * 255.0F);
 					int k1 = (int)(afloat[1] * 255.0F);
 					i1 = (int)(afloat[2] * 255.0F);
