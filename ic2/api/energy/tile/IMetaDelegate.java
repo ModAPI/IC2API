@@ -17,6 +17,8 @@ import net.minecraft.tileentity.TileEntity;
  * The sub tile array TileEntity[] just provides optional connectivity (IEnergyAcceptor,
  * IEnergyEmitter) and mandatory position (x, y, z, World) data.
  * If the connectivity data on the sub tile is missing, the meta delegate is queried instead.
+ * 
+ * See ic2/api/energy/usage.txt for an overall description of the energy net api.
  */
 public interface IMetaDelegate extends IEnergyTile {
 	/**
