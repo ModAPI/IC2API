@@ -61,16 +61,6 @@ public interface IReactor {
 	public void setMaxHeat(int newMaxHeat);
 
 	/**
-	 * add Heat to a EmitHeat Buffer
-	 * for use in  Reactor operation.. need to be use
-	 * for all Componetents with self-cooling
-	 * no more magic heat disappear
-	 */
-
-
-	public void addEmitHeat(int heat);
-
-	/**
 	 * Get's the reactor's HEM (Heat Effect Modifier)
 	 * Basic value is 1.0F.
 	 * Reducing the value causes a weakening/reduction of the heat-based sideeffects of reactors
@@ -91,7 +81,7 @@ public interface IReactor {
 	 * 
 	 * @return Energy output, not multiplied by the base EU/t value
 	 */
-	public float getReactorEnergyOutput();
+	public float getOutput();
 
 	/**
 	 * Add's the given amount of energy to the Reactor's output.
@@ -103,8 +93,8 @@ public interface IReactor {
 	/**
 	 * Get the item at the specified grid coordinates.
 	 * 
-	 * @param x X position of the item, out of bounds returns null
-	 * @param y Y position of the item, out of bounds returns null
+	 * @param x X position of the item
+	 * @param y Y position of the item
 	 * @return The item or null if there is no item
 	 */
 	public ItemStack getItemAt(int x, int y);
@@ -112,8 +102,8 @@ public interface IReactor {
 	/**
 	 * Set the item at the specified grid coordinates.
 	 * 
-	 * @param x X position of the item, out of bounds is a no-op
-	 * @param y Y position of the item, out of bounds is a no-op
+	 * @param x X position of the item
+	 * @param y Y position of the item
 	 * @param item The item to set.
 	 */
 	public void setItemAt(int x, int y, ItemStack item);
