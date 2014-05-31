@@ -4,6 +4,8 @@ import net.minecraftforge.common.ForgeDirection;
 
 /**
  * Allows a tile entity (mostly a machine) to receive energy.
+ * 
+ * See ic2/api/energy/usage.txt for an overall description of the energy net api.
  */
 public interface IEnergySink extends IEnergyAcceptor {
 	/**
