@@ -81,7 +81,7 @@ public interface IReactor {
 	 * 
 	 * @return Energy output, not multiplied by the base EU/t value
 	 */
-	public float getReactorEnergyOutput();
+	public float getOutput();
 
 	/**
 	 * Add's the given amount of energy to the Reactor's output.
