@@ -9,15 +9,15 @@ public interface ISemiFluidFuelManager extends ILiquidAcceptManager {
 	/**
 	 * Add a new fluid to the semi fluid generator.
 	 * 
-	 * @param fluid the fluid to burn
+	 * @param fluidName the fluid to burn
 	 * @param amount amount of fluid to consume per tick
 	 * @param power amount of energy generated per tick
 	 */
-	void addFluid(Fluid fluid, int amount, double power);
+	void addFluid(String fluidName, int amount, double power);
 
 	BurnProperty getBurnProperty(Fluid fluid);
 
-	Map<Fluid, BurnProperty> getBurnProperties();
+	Map<String, BurnProperty> getBurnProperties();
 
 
 	public static class BurnProperty {
