@@ -19,6 +19,9 @@ import ic2.api.energy.tile.IEnergySink;
  * It's designed to be attached to a tile entity as a delegate. Functionally BasicSink acts as a
  * one-time configurable input energy buffer, thus providing a common use case for machines.
  * 
+ * Sub-classing BasicSink instead of using it as a delegate works as well, but isn't recommended.
+ * The delegate can be extended with additional functionality through a sub class though.
+ * 
  * The constraints set by BasicSink like the strict tank-like energy buffering should provide a
  * more easy to use and stable interface than using IEnergySink directly while aiming for
  * optimal performance.
