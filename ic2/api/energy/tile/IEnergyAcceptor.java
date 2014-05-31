@@ -9,6 +9,8 @@ import net.minecraftforge.common.ForgeDirection;
  *
  * @see IEnergySink
  * @see IEnergyConductor
+ * 
+ * See ic2/api/energy/usage.txt for an overall description of the energy net api.
  */
 public interface IEnergyAcceptor extends IEnergyTile {
 	/**
